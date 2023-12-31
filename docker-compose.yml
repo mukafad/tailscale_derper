@@ -1,0 +1,10 @@
+version: '3.3'
+services:
+  yangchuansheng:
+    restart: always
+    network_mode: host
+    container_name: derper
+    environment:
+      - DERP_HTTP_PORT=2180
+      - 'DERP_ADDR=:21443'
+    image: ghcr.io/yangchuansheng/ip_derper
